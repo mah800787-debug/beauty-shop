@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Shop | Avon & Faberlic</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#fff5f8;
+ color:#593746;
+}
+header{
+ background:#e98bad;
+ color:white;
+ text-align:center;
+ padding:30px 15px;
+}
+header h1{margin:0;font-size:32px}
+header p{margin:8px 0 0}
+main{max-width:500px;margin:25px auto;padding:15px}
+.card{
+ background:white;
+ padding:22px;
+ border-radius:20px;
+ box-shadow:0 5px 20px #e8b8c944;
+}
+h2{text-align:center;color:#d76e95}
+label{display:block;margin:15px 0 6px}
+input,textarea,select{
+ width:100%;padding:13px;
+ border:1px solid #edc5d5;
+ border-radius:10px;
+ font-size:16px;
+ background:#fffafd;
+}
+textarea{min-height:110px;resize:vertical}
+button{
+ width:100%;padding:15px;
+ border:0;border-radius:12px;
+ background:#dc78a0;color:white;
+ font-size:17px;font-weight:bold;
+ margin-top:18px;
+}
+footer{text-align:center;padding:25px;color:#a56c83}
+</style>
+</head>
+<body>
+<header>
+<h1>🌸 Beauty Shop</h1>
+<p>AVON & FABERLIC</p>
+<p>Твой мир красоты и ухода 💗</p>
+</header>
+<main>
+<div class="card">
+<h2>Добро пожаловать!</h2>
+<p style="text-align:center">Оставь заявку на заказ, и администратор свяжется с тобой.</p>
+
+<form id="orderForm">
+<label>Ваше имя</label>
+<input id="name" required placeholder="Как вас зовут?">
+
+<label>Ваш телефон</label>
+<input id="phone" required placeholder="+7...">
+
+<label>Что хотите заказать?</label>
+<select id="brand">
+<option>Avon</option>
+<option>Faberlic</option>
+<option>Avon и Faberlic</option>
+</select>
+
+<label>Ваш заказ</label>
+<textarea id="order" required placeholder="Напишите название товара и количество..."></textarea>
+
+<button type="submit">💌 Отправить заявку</button>
+</form>
+<p id="message" style="text-align:center"></p>
+</div>
+</main>
+<footer>💗 Beauty Shop © 2026</footer>
+<script>
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("message").textContent=
+ "Спасибо! Форма готова. Скоро подключим отправку заявок администратору.";
+});
+</script>
+</body>
+  </html>
+                              
